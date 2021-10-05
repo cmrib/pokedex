@@ -1,5 +1,9 @@
 const poke_container = document.getElementById('poke_container');
-const pokemons_number = 150;
+
+
+const pokemons_number = 12;
+// for complete list, set to 150
+
 
 const colors = {
     fire: '#FDDFDF',
