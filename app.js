@@ -1,9 +1,7 @@
 const poke_container = document.getElementById('poke_container');
 
-
 const pokemons_number = 12;
 // for complete list, set to 150
-
 
 const colors = {
     fire: '#FDDFDF',
@@ -25,13 +23,20 @@ const colors = {
 const main_types = Object.keys(colors)
 
 
-const fetchPokemons = async () => {
+// Calls
+fetchPokemons()
+
+
+// Functions
+
+async function fetchPokemons() {
     for (let i = 1; i <= pokemons_number; i++) {
         await getPokemon(i)
     }
 }
 
-const getPokemon = async id => {
+
+async function getPokemon(id) {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
     const res = await fetch(url)
     const pokemon = await res.json();
@@ -66,4 +71,3 @@ function createPokemonCard(pokemon) {
     poke_container.appendChild(pokemonEl)
 }
 
-fetchPokemons()
