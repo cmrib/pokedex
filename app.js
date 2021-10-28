@@ -1,6 +1,6 @@
 const poke_container = document.getElementById('poke_container');
 
-const pokemons_number = 12;
+const pokemons_number = 150;
 // for complete list, set to 150
 
 const colors = {
@@ -21,6 +21,8 @@ const colors = {
 };
 
 const main_types = Object.keys(colors)
+
+console.log(main_types)
 
 
 // Calls
